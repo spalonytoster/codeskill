@@ -6,7 +6,7 @@ function ceiling(value, tolerance) {
   while (result < value) {
     result += tolerance;
   }
-  return Number.parseFloat(result.toFixed(2), 10);
+  return Number.parseFloat(result.toFixed(2), 10); // Number.toFixed returns a String which needs parsing. Might be inefficient for large amount of data.
 }
 
 /* unsigned values only */
